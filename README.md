@@ -1,41 +1,25 @@
-# Task Manager (Java 21 + Spring Boot)
+# Gift Voucher Redemption App for BigCommerce
 
-Simple **Task Management API** for experimenting with AI tools across the SDLC.
+A simple PHP app for redeeming gift vouchers, ready for integration with BigCommerce storefronts and independently executable via Docker.
 
-## Tech
-- Java 21, Spring Boot 3.3
-- Spring Web, Spring Data JPA, H2, Bean Validation
-- Maven
+## Features
+- Voucher redemption UI
+- PHP backend logic
+- Ready for BigCommerce API integration
+- Docker/Docker Compose support
 
-## Run
-```bash
-mvn spring-boot:run
-# or
-mvn clean package && java -jar target/task-manager-0.0.1-SNAPSHOT.jar
-```
+## Running Locally
+1. Install Docker & Docker Compose
+2. Run:
+   ```
+   docker-compose up --build
+   ```
+3. Access at [http://localhost:8080](http://localhost:8080)
 
-## REST Endpoints
+## Integration with BigCommerce
+- Replace the voucher logic in `src/VoucherService.php` with BigCommerce API calls.
+- Embed the UI in your BigCommerce storefront using an iframe or custom app integration.
 
-- `POST /tasks` – Create task
-- `GET /tasks` – List all tasks
-- `GET /tasks/{id}` – Get one
-- `PUT /tasks/{id}` – Update
-- `DELETE /tasks/{id}` – Delete
-- `GET /tasks/status/{status}` – Filter by status (PENDING|IN_PROGRESS|COMPLETED)
-- `GET /tasks/priority/{priority}` – Filter by priority (LOW|MEDIUM|HIGH)
-
-### Sample JSON
-```json
-{
-  "title": "Write docs",
-  "description": "Draft README",
-  "dueDate": "2025-09-30",
-  "priority": "HIGH",
-  "status": "PENDING"
-}
-```
-
-## H2 Console
-- URL: `http://localhost:8080/h2-console`
-- JDBC URL: `jdbc:h2:mem:taskdb`
-- Username: `sa` (no password)
+## Customization
+- Update UI in `public/index.php` and `public/style.css`
+- Extend backend logic in `src/VoucherService.php`

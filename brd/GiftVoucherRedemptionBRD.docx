@@ -1,0 +1,51 @@
+Gift Voucher Redemption Feature for Product Listing
+
+Background
+Currently, the product listing page does not allow users to redeem gift vouchers. To enhance the shopping experience and support promotional campaigns, a new feature is required to enable users to redeem gift vouchers for discounts on individual products.
+
+Objective
+Enable users to redeem a gift voucher for a 25% discount on a selected product via a dedicated button and modal popup interface.
+
+Functional Requirements
+1. Redeem Gift Voucher Button
+- Each product card on the listing page must display a "Redeem Gift Voucher" button.
+- The button should be clearly visible and accessible for each product.
+
+2. Voucher Redemption Modal
+- Clicking the "Redeem Gift Voucher" button opens a modal popup.
+- The modal contains:
+  - An input field for the user to enter a voucher code.
+  - A "Redeem" button to submit the voucher code.
+  - A "Cancel" button to close the modal without redeeming.
+
+3. Voucher Validation
+- On clicking "Redeem":
+  - The entered voucher code is validated.
+  - If valid, a 25% discount is applied to the product price.
+  - The modal closes and the discounted price is displayed on the product card.
+  - If invalid, a relevant validation error message is shown in the modal (e.g., "Invalid voucher code. Please try again.").
+- The modal remains open if the code is invalid, allowing the user to retry or cancel.
+
+4. Discount Display
+- After successful redemption, the product card displays:
+  - The original price (struck through or visually de-emphasized).
+  - The discounted price (highlighted).
+  - An indication that a voucher has been applied.
+
+5. User Experience
+- The modal can be closed at any time using the "Cancel" button.
+- The modal closes automatically on successful redemption.
+- The error message is only shown if the voucher code is invalid.
+
+Non-Functional Requirements
+- The feature must be responsive and work on desktop and mobile devices.
+- The modal must be accessible and keyboard-navigable.
+- Voucher validation logic must be extensible for future voucher types.
+
+Acceptance Criteria
+- "Redeem Gift Voucher" button is present on every product card.
+- Modal popup appears on button click with input, redeem, and cancel options.
+- Valid voucher code applies a 25% discount and updates the product price.
+- Invalid voucher code shows a validation error in the modal.
+- Modal closes on successful redemption or cancel.
+- Discounted price is clearly displayed after redemption.
