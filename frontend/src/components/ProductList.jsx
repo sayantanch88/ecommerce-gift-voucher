@@ -57,7 +57,7 @@ function ProductList({ onAddToCart }) {
               </div>
               <div className="cr-product-actions">
                 <button className="cr-btn" onClick={onAddToCart}>Add to Cart</button>
-                <button className="cr-btn" style={{background:'#ff4444'}} onClick={() => handleOpenModal(product)}>Redeem Gift Voucher</button>
+                <button className="cr-btn" style={{background:'#ff4444',display:'none'}} onClick={() => handleOpenModal(product)}>Redeem Gift Voucher</button>
               </div>
             </div>
           );
