@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import ProductList from './components/ProductList';
 
 export default function App() {
-  const [cartCount, setCartCount] = React.useState(2);
+  const [cartCount, setCartCount] = React.useState(0);
   const user = { name: 'Jane Doe', cartCount };
 
   function handleAddToCart() {
