@@ -1,0 +1,62 @@
+Business Requirements Document (BRD)
+Gift Voucher Redemption Feature for Product Listing
+
+---
+
+1. Background
+- The current product listing page does not support gift voucher redemption.
+- Promotional campaigns require a seamless way for users to apply gift vouchers for discounts.
+- Enhancing the shopping experience will drive engagement and increase conversion rates.
+
+2. Objective
+- Enable users to redeem a gift voucher for a 25% discount on a selected product.
+- Provide an intuitive interface via a dedicated button and modal popup.
+
+3. Functional Requirements
+1. Voucher Redemption Button
+   - Display a "Redeem Gift Voucher" button for each product in the listing.
+2. Modal Popup Interface
+   - On button click, open a modal popup for voucher code entry.
+   - Validate voucher code format and eligibility.
+   - Show error messages for invalid or expired vouchers.
+   - On successful redemption, apply a 25% discount to the selected product.
+   - Update product price in real-time within the modal and on the listing.
+3. User Feedback
+   - Display confirmation message upon successful redemption.
+   - Prevent multiple redemptions for the same product per user session.
+4. Voucher Validation
+   - Integrate with backend API to validate voucher codes.
+   - Ensure vouchers are single-use and product-specific if required.
+5. Accessibility
+   - Modal and button must be accessible via keyboard navigation and screen readers.
+
+4. Non-Functional Requirements
+- Performance: Modal and price update must occur within 2 seconds.
+- Security: Sanitize all user inputs; validate voucher codes server-side.
+- Scalability: Support high traffic during promotional periods.
+- Maintainability: Code must follow repository standards and be covered by unit/integration tests.
+- Accessibility: Comply with WCAG 2.1 AA standards.
+
+5. Acceptance Criteria
+- "Redeem Gift Voucher" button is visible for all products.
+- Modal popup opens and closes correctly.
+- Voucher code is validated and errors are shown for invalid/expired codes.
+- 25% discount is applied only for valid vouchers.
+- Price updates are reflected immediately.
+- User cannot redeem more than one voucher per product per session.
+- All requirements are covered by automated tests.
+- Accessibility checks pass for modal and button.
+
+6. Assumptions & Constraints
+- Voucher codes are provided by marketing and stored in backend.
+- Only one voucher can be redeemed per product per user session.
+- Feature must integrate with existing product listing and pricing logic.
+- Backend API for voucher validation is available and documented.
+
+7. Glossary (optional)
+- Voucher Code: Alphanumeric code provided to users for discounts.
+- Modal Popup: UI element that overlays the page for user interaction.
+
+---
+
+References: See docs/API.md for endpoint details and docs/ARCHITECTURE.md for integration notes.

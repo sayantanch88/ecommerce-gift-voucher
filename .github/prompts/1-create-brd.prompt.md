@@ -29,4 +29,4 @@ Objective: Enable users to redeem a gift voucher for a 25% discount on a selecte
 
 ---
 
-Generate a BRD for the above business use case, strictly following the standards and structure outlined above. Save all created BRD files under the `brd/` folder. The output should be ready for review and implementation planning.
+Generate a BRD for the above business use case, strictly following the standards and structure outlined above. Save the BRD as a Word document (`.docx`) under the `brd/` folder, using a descriptive filename. The output should be ready for review and implementation planning.

@@ -23,7 +23,7 @@ You are an expert developer. Your task is to complete all required development c
 - Ensure all changes pass code review and automated checks.
 
 ## Inputs
-- Jira Story Key: <Insert Jira story key>
+- Jira Story Key: GV-8
   (All story details will be fetched directly from the Jira MCP connection.)
 
 ---
