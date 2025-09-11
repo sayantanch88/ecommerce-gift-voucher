@@ -16,11 +16,11 @@ You are an expert QA engineer. Your task is to generate comprehensive test cases
   - Expected result
   - Type (positive/negative)
   - Reference to Jira story key
-- Export all generated test cases as an Excel file for review and execution.
+- Export all generated test cases as an Excel file under the test cases folder for review and execution.
 
 ## Inputs
-- Jira story key: <Insert Jira story key>
+- Jira story key: GV-6
 
 ---
 
-Generate and export all positive and negative test cases for the above Jira story, ensuring full coverage of acceptance criteria. Output should be in Excel format.
+Generate and export all positive and negative test cases for the above Jira story, ensuring full coverage of acceptance criteria. Output should be in Excel format under the test cases folder.
