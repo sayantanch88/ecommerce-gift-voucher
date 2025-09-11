@@ -1,5 +1,5 @@
 ---
-mode: ask
+mode: agent
 ---
 # BRD Creation Prompt Template
 
