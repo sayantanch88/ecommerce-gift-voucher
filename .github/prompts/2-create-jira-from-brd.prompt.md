@@ -25,9 +25,11 @@ You are an expert technical project manager and Jira administrator. Your task is
 
 
 ## Inputs
-- BRD: Refer to `brd/gift-voucher-redemption-feature.docx` for the current business requirements document.
-- Project Key: GV
-- Epic Number: GV-1
+
+## Inputs
+- BRD: Provided dynamically via chat prompt or as an input parameter. If not provided in the chat, fallback to the value in the prompt file.
+- Project Key: Provided dynamically via chat prompt or as an input parameter. If not provided in the chat, fallback to the value in the prompt file.
+- Epic Number: Provided dynamically via chat prompt or as an input parameter. If not provided in the chat, fallback to the value in the prompt file.
 
 ---
 

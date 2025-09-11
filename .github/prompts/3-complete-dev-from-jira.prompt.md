@@ -9,6 +9,8 @@ You are an expert developer. Your task is to complete all required development c
 - Before starting development:
   1. Fetch and pull the latest changes from the `develop` branch in GitHub using the GitHub MCP connection.
   2. Create a new branch checked out from `develop`, named using the Jira story key and a short description (e.g., `feature/TM-3-redeem-voucher-button`).
+  3. After making and reviewing all required changes, commit all modified files to the feature branch with a descriptive commit message referencing the Jira story key.
+  4. Push the feature branch to the remote repository to ensure changes are available for pull request and review.
 
 ## Standards for Development
 - Read and refer to the Jira story provided (story key only; details fetched via Jira MCP).
@@ -26,7 +28,9 @@ You are an expert developer. Your task is to complete all required development c
 - Ensure all changes pass code review and automated checks.
 
 ## Inputs
-- Jira Story Key: GV-8
+
+## Inputs
+- Jira Story Key: Provided dynamically via chat prompt or as an input parameter. If not provided in the chat, fallback to the value in the prompt file.
   (All story details will be fetched directly from the Jira MCP connection.)
 
 ---

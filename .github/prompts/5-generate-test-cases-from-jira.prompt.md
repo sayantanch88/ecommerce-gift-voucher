@@ -22,7 +22,7 @@ You are an expert QA engineer. Your task is to generate comprehensive test cases
 - Export all generated test cases as an Excel file under the test cases folder for review and execution.
 
 ## Inputs
-- Jira story key: GV-6
+- Jira story key: Provided dynamically via chat prompt, input parameter, or context. If not provided, fallback to the value in the prompt file.
 
 ---
 

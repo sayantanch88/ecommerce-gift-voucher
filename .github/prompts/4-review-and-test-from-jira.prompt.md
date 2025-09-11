@@ -24,9 +24,11 @@ You are an expert code reviewer and test engineer. Your task is to review the de
 - Ensure the pull request includes a summary, references the Jira story key, and passes all automated checks.
 
 ## Inputs
-- Jira Story Key: GV-6
+
+## Inputs
+- Jira Story Key: Provided dynamically via chat prompt or as an input parameter. If not provided in the chat, fallback to the value in the prompt file.
   (All story details will be fetched directly from the Jira MCP connection.)
-- Feature Branch Name: feature/GV-6-redeem-voucher-button
+- Feature Branch Name: Referenced from the current working branch or context. If not available, fallback to chat prompt or input parameter, and finally to the value in the prompt file.
 
 ---
 

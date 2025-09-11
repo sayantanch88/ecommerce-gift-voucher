@@ -18,7 +18,7 @@ You are an expert DevOps engineer and Terraform practitioner. Your task is to de
 
 ## Inputs
 - Terraform script location: infra/ecs-deploy.tf
-- GitHub branch: develop
+- GitHub branch: Provided dynamically via context, chat prompt, or input parameter. If not provided, fallback to the value in the prompt file.
   (If the branch is referenced in the Terraform script, ensure it is passed as a variable or environment value.)
 
 ---

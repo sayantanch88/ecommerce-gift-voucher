@@ -16,7 +16,7 @@ You are an expert technical writer and documentation reviewer. Your task is to r
 - Reference the relevant Jira story key in all documentation updates for traceability.
 
 ## Inputs
-- Jira Story Key: <Insert Jira story key>
+- Jira Story Key: Provided dynamically via chat prompt, input parameter, or context. If not provided, fallback to the value in the prompt file.
    (All story details will be fetched directly from the Jira MCP connection.)
 
 ## Instructions

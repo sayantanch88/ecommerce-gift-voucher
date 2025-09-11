@@ -21,11 +21,10 @@ You are an expert business analyst and product owner. Your task is to create a B
 
 
 ## Business Use Case
-Gift Voucher Redemption Feature for Product Listing
 
-Currently, the product listing page does not allow users to redeem gift vouchers. To enhance the shopping experience and support promotional campaigns, a new feature is required to enable users to redeem gift vouchers for discounts on individual products.
+## Business Use Case
+- Provided dynamically via chat prompt or as an input parameter. If not provided in the chat, fallback to the value in the prompt file.
 
-Objective: Enable users to redeem a gift voucher for a 25% discount on a selected product via a dedicated button and modal popup interface.
 
 ---
 
