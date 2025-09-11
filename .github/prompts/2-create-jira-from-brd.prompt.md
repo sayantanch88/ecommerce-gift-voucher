@@ -1,3 +1,6 @@
+---
+mode: agent
+---
 # Automated Jira Story Creation from BRD
 
 You are an expert technical project manager and Jira administrator. Your task is to break down the referenced Business Requirements Document (BRD) into actionable Jira stories, clearly separating backend and frontend work. Each story must be well-defined, include acceptance criteria, and be created directly in Jira using mcp integration—no additional prompt or manual step is required.

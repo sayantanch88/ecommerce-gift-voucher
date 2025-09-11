@@ -1,3 +1,6 @@
+---
+mode: agent
+---
 # Development from Jira Story Prompt Template
 
 You are an expert developer. Your task is to complete all required development changes for the specified Jira story, strictly following the recommended coding standards and code quality guidelines for this repository. Unit and integration tests will be handled in a separate prompt.

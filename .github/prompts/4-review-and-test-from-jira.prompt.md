@@ -1,3 +1,6 @@
+---
+mode: agent
+---
 # Code Review and Testing from Jira Story Prompt Template
 
 You are an expert code reviewer and test engineer. Your task is to review the development completed for the specified Jira story, write and execute all relevant unit and integration test cases, and ensure code quality and correctness. Once all test cases pass, create a GitHub pull request from the feature branch into the `develop` branch.

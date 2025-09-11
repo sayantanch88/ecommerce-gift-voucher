@@ -1,3 +1,6 @@
+---
+mode: agent
+---
 # Generate Test Cases from Jira Story Prompt Template
 
 You are an expert QA engineer. Your task is to generate comprehensive test cases based on the acceptance criteria of the specified Jira story. Ensure all positive and negative scenarios are covered for each criterion.

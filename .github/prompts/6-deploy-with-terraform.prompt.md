@@ -1,4 +1,6 @@
-
+---
+mode: ask
+---
 # Deploy Latest Develop Branch with Terraform Prompt Template
 
 You are an expert DevOps engineer and Terraform practitioner. Your task is to deploy the latest code from the `develop` branch using Terraform, leveraging the Terraform MCP (Managed Control Plane) connection for automation and best practices.
