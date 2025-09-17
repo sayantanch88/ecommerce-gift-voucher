@@ -22,8 +22,7 @@ const products = [
   },
 ];
 
-function ProductList({ onAddToCart }) {
-
+function ProductList({ onAddToCart, onRedeemVoucher }) {
   return (
     <>
       <div className="cr-product-list">
@@ -36,12 +35,12 @@ function ProductList({ onAddToCart }) {
             </div>
             <div className="cr-product-actions">
               <button className="cr-btn" onClick={onAddToCart}>Add to Cart</button>
-              {/* GV-6: Redeem Gift Voucher button, now hidden for test execution */}
               <button
                 className="cr-btn cr-voucher-btn"
-                style={{background:'#ff4444', display:'none'}}
+                style={{ background: '#ff4444' }}
                 aria-label={`Redeem Gift Voucher for ${product.name}`}
                 tabIndex={0}
+                onClick={() => onRedeemVoucher(product)}
               >
                 Redeem Gift Voucher
               </button>
