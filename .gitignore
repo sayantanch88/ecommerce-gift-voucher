@@ -18,6 +18,7 @@ frontend/src/components/__tests__/coverage/
 # Playwright test artifacts
 frontend/e2e/test-results/
 frontend/e2e/playwright-report/
+frontend/e2e/results/
 frontend/playwright-report/
 
 # MCP Playwright artifacts
