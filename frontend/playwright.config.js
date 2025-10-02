@@ -20,7 +20,7 @@ const config = {
     ['json', { outputFile: './e2e/test-results/results.json' }],
   ],
   use: {
-    baseURL: 'http://localhost:5173', // Updated to match Vite dev server
+    baseURL: 'http://localhost:5174', // Updated to match current Vite dev server port
     headless: true,
     // Store screenshots and videos in e2e directory
     screenshot: 'only-on-failure',

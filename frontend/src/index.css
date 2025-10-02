@@ -125,10 +125,33 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s;
+  min-height: 44px; /* Ensure minimum touch target size for accessibility */
 }
 .cr-btn:active,
 .cr-btn:hover {
   background: #005a43;
+}
+
+/* GV-48: Distinctive styling for voucher redemption button */
+.cr-voucher-btn {
+  background: #e63946; /* Distinctive red color */
+  color: #fff;
+}
+.cr-voucher-btn:hover {
+  background: #d62828; /* Darker red on hover */
+}
+.cr-voucher-btn:active {
+  background: #ba181b; /* Even darker red on active */
+}
+.cr-voucher-btn:focus {
+  outline: 2px solid #f77f00; /* High contrast focus indicator */
+  outline-offset: 2px;
+}
+
+/* Ensure keyboard navigation accessibility */
+.cr-btn:focus {
+  outline: 2px solid #20c997; /* High contrast focus indicator */
+  outline-offset: 2px;
 }
 .cr-cart {
   background: #fff;
@@ -157,4 +180,49 @@ body {
   font-weight: 500;
   color: #008060;
   margin-top: 8px;
+}
+
+/* GV-48: Mobile responsiveness for product cards and buttons */
+@media (max-width: 768px) {
+  .cr-product-list {
+    gap: 20px;
+    margin: 0 16px;
+  }
+  
+  .cr-product-card {
+    width: 100%;
+    max-width: 340px;
+    padding: 16px;
+  }
+  
+  .cr-product-img {
+    width: 100%;
+    max-width: 280px;
+    height: 180px;
+  }
+  
+  .cr-btn {
+    min-height: 48px; /* Larger touch targets on mobile */
+    padding: 12px 0;
+    font-size: 1.1rem;
+  }
+  
+  .cr-product-actions {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cr-product-card {
+    padding: 12px;
+  }
+  
+  .cr-product-img {
+    height: 160px;
+  }
+  
+  .cr-btn {
+    min-height: 50px; /* Even larger touch targets on small screens */
+    font-size: 1rem;
+  }
 }
