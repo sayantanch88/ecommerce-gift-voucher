@@ -12,18 +12,20 @@ const config = {
     '**/__tests__/**',
     '**/src/components/__tests__/**'
   ],
-  reporter: [['list'], ['html', { outputFolder: './e2e/results', open: 'never' }], ['json', { outputFile: './e2e/results/results.json' }]],
-  outputDir: './e2e/results',
-  use: {
-    baseURL: 'http://localhost:3000',
-    headless: true,
-  },
-  outputDir: require('path').resolve(__dirname, 'e2e/results'),
+  // Configure all outputs to be under e2e directory
+  outputDir: './e2e/test-results',
   reporter: [
     ['list'],
-    ['html', { outputFolder: require('path').resolve(__dirname, 'e2e/results'), open: 'never' }],
-    ['json', { outputFile: require('path').resolve(__dirname, 'e2e/results/results.json') }],
+    ['html', { outputFolder: './e2e/playwright-report', open: 'never' }],
+    ['json', { outputFile: './e2e/test-results/results.json' }],
   ],
+  use: {
+    baseURL: 'http://localhost:5173', // Updated to match Vite dev server
+    headless: true,
+    // Store screenshots and videos in e2e directory
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+  },
 };
 
 module.exports = config;

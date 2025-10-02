@@ -15,6 +15,11 @@ backend/target/
 coverage/
 frontend/src/components/__tests__/coverage/
 
+# Playwright test artifacts
+frontend/e2e/test-results/
+frontend/e2e/playwright-report/
+frontend/playwright-report/
+
 # MCP Playwright artifacts
 .playwright-mcp/
 *.png
