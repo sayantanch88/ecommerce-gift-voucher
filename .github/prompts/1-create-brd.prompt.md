@@ -16,7 +16,7 @@ Create comprehensive Business Requirements Documents (BRD) from business use cas
 - Ensure alignment between business needs and technical implementation
 
 ## Prerequisites
-- Business use case or requirement description
+- **User must provide business use case or requirement description**
 - Understanding of target system capabilities and constraints
 - Access to relevant business stakeholders (if clarification needed)
 
@@ -27,17 +27,23 @@ Create comprehensive Business Requirements Documents (BRD) from business use cas
 - Reference industry standards and compliance requirements where applicable
 
 ## Workflow Steps
-1. **Analyze Business Use Case:** Extract core business objectives and user needs
-2. **Structure Requirements:** Organize into functional and non-functional categories
-3. **Define Acceptance Criteria:** Create testable criteria for feature completion
-4. **Document Assumptions:** Note dependencies, constraints, and assumptions
-5. **Review & Validate:** Ensure completeness and clarity of requirements
-6. **Generate Document:** Create formal BRD document in specified format
+1. **Request Business Use Case:** Prompt user to provide the business use case description
+2. **Analyze Business Use Case:** Extract core business objectives and user needs from provided input
+3. **Structure Requirements:** Organize into functional and non-functional categories
+4. **Define Acceptance Criteria:** Create testable criteria for feature completion
+5. **Document Assumptions:** Note dependencies, constraints, and assumptions
+6. **Review & Validate:** Ensure completeness and clarity of requirements
+7. **Generate Document:** Create formal BRD document in specified format
 
 ## Inputs
-- **Business Use Case:** Provided dynamically via chat prompt or input parameter
-  - Source: Business stakeholder requirements, feature requests, or user stories
+- **Business Use Case:** Provided by user as required input (REQUIRED USER INPUT)
+  - Source: User must provide business stakeholder requirements, feature requests, or user stories
   - Format: Natural language description of business need
+  - Content: Should include business objective, problem statement, and expected outcomes
+  - Examples: 
+    - "Gift Voucher Redemption Feature for Product Listing"
+    - "User Authentication and Authorization System"
+    - "Payment Processing Integration"
 
 ## Outputs
 - **BRD Document:** Comprehensive requirements document in Word format (.docx)
@@ -75,4 +81,15 @@ Create comprehensive Business Requirements Documents (BRD) from business use cas
 
 ---
 
-Generate a comprehensive BRD for the provided business use case, following the standards and structure outlined above. Save the BRD as a Word document (.docx) under the `docs/brd/` folder with a descriptive filename.
+**REQUIRED USER INPUT:** 
+**Business Use Case Description:** Please provide a detailed business use case that includes:
+- Business objective or problem to be solved
+- Target users and stakeholders
+- Expected business outcomes
+- Any specific requirements or constraints
+- Context about the current system limitations
+
+**Example Format:**
+"Gift Voucher Redemption Feature for Product Listing - Currently, the product listing page does not allow users to redeem gift vouchers. To enhance the shopping experience and support promotional campaigns, a new feature is required to enable users to redeem gift vouchers for discounts on individual products."
+
+Once the business use case is provided, generate a comprehensive BRD following the standards and structure outlined above. Save the BRD as a Word document (.docx) under the `docs/brd/` folder with a descriptive filename.

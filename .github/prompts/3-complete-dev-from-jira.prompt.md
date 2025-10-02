@@ -18,6 +18,7 @@ Complete comprehensive development implementation for specified Jira stories, fo
 
 ## Prerequisites
 - Jira story with clear acceptance criteria from Phase 2
+- **User must specify which Jira story key to implement**
 - Development environment setup and dependencies installed
 - Access to repository with appropriate permissions
 - Understanding of system architecture and existing codebase
@@ -31,17 +32,25 @@ Complete comprehensive development implementation for specified Jira stories, fo
 - Follow security best practices and data sanitization
 
 ## Workflow Steps
-1. **Setup Development Branch:** Create feature branch from latest develop
-2. **Story Analysis:** Extract requirements and acceptance criteria from Jira
-3. **Code Implementation:** Develop features according to specifications
-4. **Code Review:** Self-review for quality, standards, and completeness
-5. **Commit Changes:** Create descriptive commits referencing Jira story
-6. **Push Branch:** Make feature branch available for review and testing
+1. **Request Story Key:** Prompt user to specify which Jira story to implement
+2. **Git Repository Setup:** Fetch latest changes and ensure clean working state
+   - Fetch latest changes from remote repository
+   - Pull latest changes to develop branch
+   - Ensure working directory is clean
+3. **Setup Development Branch:** Create feature branch from latest develop
+   - Checkout develop branch
+   - Create and checkout new feature branch: `feature/[STORY-KEY]-[description]`
+4. **Story Analysis:** Extract requirements and acceptance criteria from specified Jira story
+5. **Code Implementation:** Develop features according to specifications
+6. **Code Review:** Self-review for quality, standards, and completeness
+7. **Commit Changes:** Create descriptive commits referencing Jira story
+8. **Initial Push:** Push feature branch to remote for backup and collaboration
 
 ## Inputs
-- **Jira Story Key:** Story identifier for requirement extraction
-  - Source: Jira MCP connection for story details
+- **Jira Story Key:** Story identifier for requirement extraction (REQUIRED USER INPUT)
+  - Source: User must specify which Jira story to implement
   - Format: Standard Jira story key (e.g., GV-123)
+  - Note: User must provide the specific story key they want to implement
 - **Development Branch:** Feature branch for implementation
   - Source: Automatically created from develop branch
   - Naming: `feature/[STORY-KEY]-[description]`
@@ -69,11 +78,16 @@ Complete comprehensive development implementation for specified Jira stories, fo
 - **Development Environment:** Local testing and validation tools
 
 ## Git Workflow Standards
+### Repository Preparation:
+- **Fetch Remote:** Always fetch latest changes from origin before starting
+- **Update Develop:** Pull latest changes to develop branch
+- **Clean State:** Ensure working directory is clean before branching
+
 ### Branch Management:
-- **Base Branch:** Always branch from latest `develop`
+- **Base Branch:** Always branch from latest `develop` after fetching/pulling
 - **Branch Naming:** `feature/[STORY-KEY]-[short-description]`
 - **Commit Messages:** Reference Jira story key and describe changes clearly
-- **Push Strategy:** Push feature branch to remote for collaboration
+- **Initial Push:** Push feature branch to remote immediately after creation for backup
 
 ### Code Organization:
 - **Frontend Changes:** React components, styling, and client-side logic
@@ -89,4 +103,4 @@ Complete comprehensive development implementation for specified Jira stories, fo
 
 ---
 
-Complete all development implementation for the specified Jira story, following established coding standards and Git workflow. Create a feature branch, implement all acceptance criteria, and push changes for review and testing phases.
+**REQUIRED USER INPUT:** Please specify the Jira story key (e.g., GV-43, GV-44) that you want to implement. The agent will then complete all development implementation for that specific story, following established coding standards and Git workflow. Create a feature branch, implement all acceptance criteria, and push changes for review and testing phases.

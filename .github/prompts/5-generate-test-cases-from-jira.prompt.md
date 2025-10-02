@@ -18,6 +18,7 @@ Generate comprehensive test cases from Jira story acceptance criteria, covering 
 
 ## Prerequisites
 - Jira story with defined acceptance criteria from Phase 2
+- **User must specify Jira story key to generate test cases for**
 - Understanding of system functionality and user workflows
 - Knowledge of testing methodologies and best practices
 - Access to test case documentation systems
@@ -30,17 +31,19 @@ Generate comprehensive test cases from Jira story acceptance criteria, covering 
 - Maintain traceability to original Jira story requirements
 
 ## Workflow Steps
-1. **Story Analysis:** Extract acceptance criteria and functional requirements
-2. **Scenario Identification:** Identify positive and negative test scenarios
-3. **Test Case Design:** Structure detailed test cases with clear steps
-4. **Documentation Creation:** Generate comprehensive test case documentation
-5. **Validation Review:** Ensure coverage of all acceptance criteria
-6. **Export Documentation:** Create Excel file for test execution tracking
+1. **Request Story Key:** Prompt user to specify which Jira story to generate test cases for
+2. **Story Analysis:** Extract acceptance criteria and functional requirements from specified story
+3. **Scenario Identification:** Identify positive and negative test scenarios
+4. **Test Case Design:** Structure detailed test cases with clear steps
+5. **Documentation Creation:** Generate comprehensive test case documentation
+6. **Validation Review:** Ensure coverage of all acceptance criteria
+7. **Export Documentation:** Create Excel file for test execution tracking
 
 ## Inputs
-- **Jira Story Key:** Story identifier for acceptance criteria extraction
-  - Source: Jira MCP connection for story details
-  - Format: Standard Jira story key (e.g., GV-123)
+- **Jira Story Key:** Story identifier for acceptance criteria extraction (REQUIRED USER INPUT)
+  - Source: User must specify which Jira story to generate test cases for
+  - Format: Standard Jira story key (e.g., GV-43, GV-44)
+  - Purpose: Extract acceptance criteria and requirements for test case creation
 
 ## Outputs
 - **Test Case Document:** Comprehensive Excel file with all test cases
@@ -90,4 +93,4 @@ Generate comprehensive test cases from Jira story acceptance criteria, covering 
 
 ---
 
-Generate comprehensive positive and negative test cases for the specified Jira story acceptance criteria. Create detailed test case documentation in Excel format under the `docs/test-cases/` directory, ensuring full coverage of all functional and non-functional requirements.
+**REQUIRED USER INPUT:** Please specify the Jira story key (e.g., GV-43, GV-44) that you want to generate test cases for. The agent will then generate comprehensive positive and negative test cases for the specified Jira story acceptance criteria. Create detailed test case documentation in Excel format under the `docs/test-cases/` directory, ensuring full coverage of all functional and non-functional requirements.

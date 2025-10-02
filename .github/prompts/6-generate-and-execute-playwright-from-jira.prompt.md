@@ -18,6 +18,7 @@ Generate comprehensive Playwright UI automation test cases from Jira story accep
 
 ## Prerequisites
 - Jira story with defined acceptance criteria from Phase 2
+- **User must specify Jira story key to generate and execute tests for**
 - Frontend application running and accessible (typically http://localhost:3000 or http://localhost:5173)
 - MCP browser automation tools available and functional
 - Understanding of UI testing patterns and user workflows
@@ -30,17 +31,25 @@ Generate comprehensive Playwright UI automation test cases from Jira story accep
 - Reference Jira story key in all test artifacts for traceability
 
 ## Workflow Steps
-1. **Jira Story Analysis:** Extract acceptance criteria and UI interaction requirements
-2. **Test Scenario Design:** Identify positive, negative, and edge case scenarios
-3. **Test Generation:** Create Playwright test files with comprehensive coverage
-4. **MCP Tool Activation:** Activate necessary browser automation capabilities
-5. **Test Execution:** Run tests using MCP tools for real-time validation
-6. **Results Documentation:** Generate comprehensive reports with visual evidence
+1. **Request Story Key:** Prompt user to specify which Jira story to generate and execute tests for
+2. **Branch Verification:** Ensure working on the correct feature branch for the story
+   - Verify current branch is `feature/[STORY-KEY]-[description]`
+   - Checkout feature branch if not already on it
+3. **Jira Story Analysis:** Extract acceptance criteria and UI interaction requirements from specified story
+4. **Test Scenario Design:** Identify positive, negative, and edge case scenarios
+5. **Test Generation:** Create Playwright test files with comprehensive coverage
+6. **MCP Tool Activation:** Activate necessary browser automation capabilities
+7. **Test Execution:** Run tests using MCP tools for real-time validation
+8. **Results Documentation:** Generate comprehensive reports with visual evidence
+9. **Commit Test Files:** Commit Playwright test files to the feature branch
+10. **Final Push:** Push all changes to remote feature branch
+11. **Pull Request Creation:** Create PR for code review and merge to develop branch
 
 ## Inputs
-- **Jira Story Key:** Story identifier for acceptance criteria extraction
-  - Source: Jira MCP connection for story details and requirements
-  - Format: Standard Jira story key (e.g., GV-123)
+- **Jira Story Key:** Story identifier for acceptance criteria extraction (REQUIRED USER INPUT)
+  - Source: User must specify which Jira story to generate and execute tests for
+  - Format: Standard Jira story key (e.g., GV-43, GV-44)
+  - Purpose: Extract acceptance criteria and UI requirements for test generation
 - **Frontend Application URL:** Running application endpoint for testing
   - Source: Local development server or deployed environment
   - Default: http://localhost:3000 or http://localhost:5173
@@ -55,6 +64,13 @@ Generate comprehensive Playwright UI automation test cases from Jira story accep
   - Evidence: Screenshots and visual validation artifacts
 - **Test Report:** Comprehensive summary of test execution and results
   - Content: Pass/fail status, performance metrics, issues identified
+- **Git Artifacts:** Version control deliverables
+  - Committed test files to feature branch
+  - Final push to remote repository
+- **Pull Request:** Ready for team review and merge
+  - Summary of all changes made during development cycle
+  - Links to Jira story and test results
+  - Ready for code review and merge to develop branch
 
 ## Quality Gates
 - All Jira acceptance criteria have corresponding test scenarios
@@ -150,7 +166,10 @@ await mcp_microsoft_pla_browser_take_screenshot({
 - Test results provide clear pass/fail status with detailed error information
 - Generated tests are maintainable and follow established patterns
 - Test artifacts enable effective regression testing and validation
+- All changes are committed and pushed to feature branch
+- Pull request is created with comprehensive summary linking to Jira story
+- Development cycle is complete and ready for team review
 
 ---
 
-Generate comprehensive Playwright UI automation test cases for the specified Jira story, save them under `frontend/e2e/`, and execute them using MCP browser automation tools. Ensure all acceptance criteria are covered and provide detailed execution results with comprehensive visual evidence.
+**REQUIRED USER INPUT:** Please specify the Jira story key (e.g., GV-43, GV-44) that you want to generate and execute Playwright tests for. The agent will then generate comprehensive Playwright UI automation test cases for the specified Jira story, save them under `frontend/e2e/`, execute them using MCP browser automation tools, commit all changes, push to the feature branch, and create a pull request for team review.

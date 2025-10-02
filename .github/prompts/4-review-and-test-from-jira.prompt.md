@@ -18,6 +18,7 @@ Conduct comprehensive code review and testing for implemented Jira stories, ensu
 
 ## Prerequisites
 - Completed development implementation from Phase 3
+- **User must specify Jira story key to review and test**
 - Feature branch with all changes committed and pushed
 - Access to testing frameworks and tools
 - Understanding of testing strategies and coverage requirements
@@ -30,19 +31,25 @@ Conduct comprehensive code review and testing for implemented Jira stories, ensu
 - Validate security, performance, and maintainability aspects
 
 ## Workflow Steps
-1. **Code Review:** Analyze implementation against requirements and standards
-2. **Test Planning:** Identify test scenarios based on acceptance criteria
-3. **Test Implementation:** Create unit and integration test cases
-4. **Test Execution:** Run all tests and validate results
-5. **Quality Validation:** Ensure code quality and coverage metrics
-6. **Pull Request Creation:** Create PR for code review and merge process
+1. **Request Story Key:** Prompt user to specify which Jira story to review and test
+2. **Branch Checkout:** Checkout the feature branch for the specified story
+   - Identify feature branch: `feature/[STORY-KEY]-[description]`
+   - Checkout the feature branch to review implementation
+3. **Code Review:** Analyze implementation against specified story requirements and standards
+4. **Test Planning:** Identify test scenarios based on acceptance criteria from Jira story
+5. **Test Implementation:** Create unit and integration test cases
+6. **Test Execution:** Run all tests and validate results
+7. **Quality Validation:** Ensure code quality and coverage metrics
+8. **Commit Test Changes:** Commit any new tests to the feature branch
+9. **Note:** Pull request creation will be handled after Playwright execution in Phase 6
 
 ## Inputs
-- **Jira Story Key:** Story identifier for requirement validation
-  - Source: Jira MCP connection for acceptance criteria verification
-  - Format: Standard Jira story key (e.g., GV-123)
+- **Jira Story Key:** Story identifier for requirement validation (REQUIRED USER INPUT)
+  - Source: User must specify which Jira story to review and test
+  - Format: Standard Jira story key (e.g., GV-43, GV-44)
+  - Purpose: Extract acceptance criteria and requirements for validation
 - **Feature Branch:** Implementation branch for review and testing
-  - Source: Git repository with completed development changes
+  - Source: Automatically identified from Git repository based on story key
   - Format: `feature/[STORY-KEY]-[description]`
 
 ## Outputs
@@ -91,9 +98,10 @@ Conduct comprehensive code review and testing for implemented Jira stories, ensu
 - All unit and integration tests pass successfully
 - Code coverage meets or exceeds established thresholds
 - Implementation fully satisfies Jira story acceptance criteria
-- Pull request is created with comprehensive description
-- Code is ready for peer review and potential merge to develop branch
+- Test changes are committed to the feature branch
+- Code is ready for Playwright testing phase (Phase 6)
+- Feature branch is prepared for final push and PR creation
 
 ---
 
-Conduct comprehensive code review and testing for the specified Jira story implementation. Create and execute all necessary test cases, validate code quality, and create a pull request for team review and merge consideration.
+**REQUIRED USER INPUT:** Please specify the Jira story key (e.g., GV-43, GV-44) that you want to review and test. The agent will then conduct comprehensive code review and testing for the specified Jira story implementation. Create and execute all necessary test cases, validate code quality, and commit test changes to the feature branch. Pull request creation will be handled after Playwright execution in Phase 6.
