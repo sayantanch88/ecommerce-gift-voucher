@@ -1,0 +1,242 @@
+Test Case ID,Title,Description,Jira Reference,Test Type,Priority,Preconditions,Test Steps,Expected Result,Notes
+TC-GV43-001,Product Listing Page Loads with Redeem Voucher Buttons,Verify that each product card displays a Redeem Voucher button when the page loads,GV-43 AC1,Positive,High,"1. Application is running and accessible
+2. User has internet connection
+3. Browser supports JavaScript","1. Open web browser
+2. Navigate to the application URL
+3. Wait for page to fully load
+4. Observe the product listing section","1. Page loads without errors
+2. Multiple product cards are displayed
+3. Each product card contains a 'Redeem Voucher' button
+4. Buttons are clearly visible and properly styled with orange color","Covers AC1 - Button Display"
+
+TC-GV43-002,Redeem Voucher Button Styling and Visibility,Verify the visual styling and prominence of Redeem Voucher buttons,GV-43 AC1,Positive,High,"1. Product listing page is loaded
+2. Multiple products are visible","1. Examine each product card on the page
+2. Locate the Redeem Voucher button on each card
+3. Check button styling and color
+4. Verify button text is clearly readable
+5. Compare styling with other buttons on the page","1. Redeem Voucher button has distinct orange styling (cr-voucher-btn class)
+2. Button text 'Redeem Voucher' is clearly readable
+3. Button is prominently placed within product actions area
+4. Styling is consistent across all product cards
+5. Button stands out from other buttons","Validates proper button styling implementation"
+
+TC-GV43-003,Redeem Voucher Button Click Opens Modal,Verify clicking Redeem Voucher button opens the voucher modal with correct product information,GV-43 AC2,Positive,High,"1. Product listing page is loaded
+2. At least one product with Redeem Voucher button is visible","1. Identify a specific product on the page (e.g., SORRENTO Fabric Modular Sofa)
+2. Click the 'Redeem Voucher' button for that product
+3. Observe the page behavior
+4. Check if modal appears
+5. Verify modal content","1. Voucher redemption modal opens immediately
+2. Modal displays 'Redeem Gift Voucher' title
+3. Modal shows the specific product name (e.g., 'SORRENTO Fabric Modular Sofa')
+4. Modal contains voucher code input field
+5. Modal has Redeem and Cancel buttons
+6. Modal overlay covers the background","Core functionality test for AC2"
+
+TC-GV43-004,Multiple Product Button Interaction,Verify that different product Redeem Voucher buttons pass correct product information,GV-43 AC2,Positive,High,"1. Product listing page is loaded
+2. Multiple products are visible (at least 3)","1. Click Redeem Voucher button for first product (SORRENTO)
+2. Verify modal shows correct product name
+3. Close modal by clicking Cancel
+4. Click Redeem Voucher button for second product (HARLOW)
+5. Verify modal shows correct product name
+6. Close modal
+7. Click Redeem Voucher button for third product (AVA)
+8. Verify modal shows correct product name","1. Each modal opening shows the correct product name
+2. SORRENTO button opens modal with 'SORRENTO Fabric Modular Sofa'
+3. HARLOW button opens modal with 'HARLOW Side Table'
+4. AVA button opens modal with 'AVA Bed'
+5. Product information is accurately passed to modal","Ensures product-specific data passing works correctly"
+
+TC-GV43-005,Modal Close and Cancel Functionality,Verify modal can be closed and doesn't affect other functionality,GV-43 AC2,Positive,Medium,"1. Product listing page is loaded
+2. Voucher modal is open","1. Open voucher modal by clicking any Redeem Voucher button
+2. Click the 'Cancel' button in modal
+3. Verify modal closes
+4. Try clicking other buttons on the page (Add to Cart)
+5. Open voucher modal again
+6. Close by clicking outside modal area (if applicable)","1. Cancel button closes the modal immediately
+2. Background page becomes interactive again
+3. Other page functionality (Add to Cart) continues to work
+4. Modal can be reopened without issues
+5. Page state is preserved after modal interactions","Tests modal lifecycle and page interaction"
+
+TC-GV43-006,Responsive Design - Desktop View,Verify Redeem Voucher buttons display correctly on desktop screens,GV-43 AC3,Positive,High,"1. Desktop browser (screen width >= 1024px)
+2. Product listing page loaded","1. Resize browser window to desktop size (1920x1080)
+2. Refresh the page if needed
+3. Examine product cards layout
+4. Check Redeem Voucher button positioning
+5. Verify button sizing and spacing
+6. Test button hover effects","1. Product cards display in grid layout
+2. Redeem Voucher buttons are properly positioned in product actions area
+3. Buttons maintain consistent sizing across products
+4. Hover effects work correctly (color change to darker orange)
+5. Buttons remain fully clickable and accessible
+6. Text is clearly readable at desktop size","Desktop responsive design validation"
+
+TC-GV43-007,Responsive Design - Tablet View,Verify Redeem Voucher buttons maintain functionality on tablet devices,GV-43 AC3,Positive,High,"1. Browser window resized to tablet dimensions (768px width)
+2. Product listing page loaded","1. Resize browser window to tablet width (768px)
+2. Refresh page to apply responsive styles
+3. Check product card layout adapts properly
+4. Verify Redeem Voucher button visibility
+5. Test button tap functionality
+6. Check button sizing is appropriate for touch","1. Product cards adapt to tablet layout
+2. Redeem Voucher buttons remain visible and accessible
+3. Button size is appropriate for touch interaction
+4. Tap functionality works correctly
+5. Modal opens properly on button tap
+6. All text remains readable","Tablet responsive design validation"
+
+TC-GV43-008,Responsive Design - Mobile View,Verify Redeem Voucher buttons work correctly on mobile devices,GV-43 AC3,Positive,High,"1. Browser window resized to mobile dimensions (480px width)
+2. Product listing page loaded","1. Resize browser window to mobile width (480px)
+2. Refresh page to apply mobile styles
+3. Verify product card layout on mobile
+4. Check Redeem Voucher button accessibility
+5. Test button tap on mobile view
+6. Verify modal displays properly on small screen","1. Product cards stack vertically on mobile
+2. Redeem Voucher buttons remain fully functional
+3. Button size is optimized for mobile touch
+4. Modal adapts to mobile screen size
+5. Modal content remains readable on small screen
+6. Touch interactions work smoothly","Mobile responsive design validation"
+
+TC-GV43-009,Accessibility - Keyboard Navigation,Verify Redeem Voucher buttons are accessible via keyboard navigation,GV-43 AC3,Positive,Medium,"1. Product listing page is loaded
+2. Keyboard focus is available","1. Click on browser address bar to reset focus
+2. Press Tab key multiple times to navigate through page elements
+3. Locate Redeem Voucher buttons using Tab navigation
+4. Press Enter key when focused on a Redeem Voucher button
+5. Verify modal opens
+6. Navigate within modal using Tab key","1. Redeem Voucher buttons receive keyboard focus
+2. Focus indicator is clearly visible on buttons
+3. Enter key successfully opens voucher modal
+4. Tab order is logical and predictable
+5. Modal elements are keyboard accessible
+6. User can navigate entire workflow using only keyboard","Keyboard accessibility compliance"
+
+TC-GV43-010,Accessibility - Screen Reader Support,Verify Redeem Voucher buttons have proper ARIA labels for screen readers,GV-43 AC3,Positive,Medium,"1. Product listing page is loaded
+2. Screen reader simulation or inspection tools available","1. Inspect the HTML of Redeem Voucher buttons
+2. Check for aria-label attributes
+3. Verify aria-label content is descriptive
+4. Test with screen reader software if available
+5. Check tabindex attributes","1. Each Redeem Voucher button has aria-label attribute
+2. Aria-label contains product-specific information (e.g., 'Redeem Voucher for SORRENTO Fabric Modular Sofa')
+3. Buttons have proper tabindex values (tabindex='0')
+4. Screen reader announces button purpose clearly
+5. Product names are included in accessibility labels","Screen reader accessibility validation"
+
+TC-GV43-011,Negative Test - Page Load Without JavaScript,Verify graceful degradation when JavaScript is disabled,GV-43,Negative,Low,"1. Browser with JavaScript disabled
+2. Product listing page URL available","1. Disable JavaScript in browser settings
+2. Navigate to product listing page
+3. Wait for page to load
+4. Examine page content and functionality
+5. Check if Redeem Voucher buttons are present","1. Page loads basic content without JavaScript errors
+2. Product information is still displayed
+3. Redeem Voucher buttons may be present but non-functional
+4. No JavaScript errors appear in console
+5. Page gracefully degrades functionality","Tests progressive enhancement approach"
+
+TC-GV43-012,Negative Test - Rapid Button Clicking,Verify system handles rapid clicking of Redeem Voucher button,GV-43,Negative,Medium,"1. Product listing page is loaded
+2. Voucher modal is not open","1. Locate a Redeem Voucher button
+2. Click the button rapidly 5-10 times in quick succession
+3. Observe system behavior
+4. Check if multiple modals open
+5. Verify page responsiveness","1. Only one modal opens regardless of rapid clicking
+2. System prevents duplicate modal instances
+3. Page remains responsive during rapid clicks
+4. No JavaScript errors occur
+5. Modal functionality remains intact","Prevents UI bugs from rapid user interaction"
+
+TC-GV43-013,Negative Test - Modal State Conflict,Verify behavior when multiple modal triggers are attempted,GV-43,Negative,Medium,"1. Product listing page is loaded
+2. One voucher modal is already open","1. Open voucher modal by clicking first product's Redeem Voucher button
+2. Without closing modal, try clicking Redeem Voucher button on different product
+3. Observe system behavior
+4. Check modal content and state
+5. Verify proper modal management","1. Second button click either has no effect or properly replaces modal content
+2. No multiple modals appear simultaneously
+3. Modal state remains consistent
+4. System handles modal conflicts gracefully
+5. User interface remains stable","Tests modal state management"
+
+TC-GV43-014,Edge Case - Very Long Product Names,Verify button and modal behavior with long product names,GV-43,Edge Case,Low,"1. Test environment with product having very long name
+2. Product listing page loaded","1. Locate product with longest name
+2. Check Redeem Voucher button layout
+3. Click button to open modal
+4. Verify modal displays long product name correctly
+5. Check for text truncation or overflow","1. Button layout accommodates product name length
+2. Modal displays full product name without overflow
+3. Text wrapping works correctly in modal
+4. UI elements remain properly aligned
+5. No layout breaking occurs","Tests UI robustness with edge case data"
+
+TC-GV43-015,Integration Test - Add to Cart and Redeem Voucher Workflow,Verify Redeem Voucher functionality doesn't interfere with Add to Cart,GV-43,Integration,High,"1. Product listing page is loaded
+2. Cart functionality is working","1. Click 'Add to Cart' button for first product
+2. Verify cart count increases
+3. Click 'Redeem Voucher' button for same product
+4. Complete voucher redemption process
+5. Verify cart count is preserved
+6. Test both functionalities work independently","1. Add to Cart functionality works correctly
+2. Cart count increases when items added
+3. Redeem Voucher functionality works independently
+4. Cart state is preserved during voucher operations
+5. Both features can be used for same product
+6. No interference between features","Ensures feature integration compatibility"
+
+TC-GV43-016,Performance Test - Page Load with Multiple Products,Verify page performance with all Redeem Voucher buttons,GV-43,Performance,Medium,"1. Product listing page with multiple products
+2. Browser developer tools available","1. Open browser developer tools
+2. Navigate to Network tab
+3. Load product listing page
+4. Measure page load time
+5. Check for any performance issues with button rendering
+6. Verify all buttons load and render properly","1. Page loads within acceptable time (< 3 seconds)
+2. All Redeem Voucher buttons render correctly
+3. No performance bottlenecks in button creation
+4. Page remains responsive after full load
+5. Button click response time is immediate
+6. No memory leaks from button event handlers","Performance validation for multiple button instances"
+
+TC-GV43-017,Security Test - Button Event Handler Integrity,Verify button click handlers cannot be maliciously modified,GV-43,Security,Low,"1. Product listing page loaded
+2. Browser developer console access","1. Open browser developer console
+2. Attempt to access button click handlers
+3. Try to modify button behavior through console
+4. Test if malicious code injection is possible
+5. Verify button security measures","1. Button click handlers are properly encapsulated
+2. Direct manipulation of handlers is prevented
+3. No successful code injection through button interactions
+4. Security measures protect against XSS
+5. Button functionality remains secure","Basic security validation for button implementation"
+
+TC-GV43-018,Cross-Browser Compatibility - Chrome,Verify Redeem Voucher functionality works in Google Chrome,GV-43,Compatibility,High,"1. Google Chrome browser (latest version)
+2. Product listing page accessible","1. Open Google Chrome browser
+2. Navigate to product listing page
+3. Test all Redeem Voucher button functionality
+4. Verify modal behavior
+5. Check responsive design works
+6. Test all acceptance criteria in Chrome","1. All Redeem Voucher buttons display correctly in Chrome
+2. Click functionality works perfectly
+3. Modal opens and displays properly
+4. Responsive design functions as expected
+5. No browser-specific issues occur
+6. All acceptance criteria pass in Chrome","Chrome browser compatibility validation"
+
+TC-GV43-019,Cross-Browser Compatibility - Firefox,Verify Redeem Voucher functionality works in Mozilla Firefox,GV-43,Compatibility,High,"1. Mozilla Firefox browser (latest version)
+2. Product listing page accessible","1. Open Mozilla Firefox browser
+2. Navigate to product listing page
+3. Test all Redeem Voucher button functionality
+4. Verify modal behavior
+5. Check responsive design works
+6. Test all acceptance criteria in Firefox","1. All Redeem Voucher buttons display correctly in Firefox
+2. Click functionality works perfectly
+3. Modal opens and displays properly
+4. Responsive design functions as expected
+5. No browser-specific issues occur
+6. All acceptance criteria pass in Firefox","Firefox browser compatibility validation"
+
+TC-GV43-020,Cross-Browser Compatibility - Safari,Verify Redeem Voucher functionality works in Safari browser,GV-43,Compatibility,Medium,"1. Safari browser (latest version)
+2. Product listing page accessible","1. Open Safari browser
+2. Navigate to product listing page
+3. Test all Redeem Voucher button functionality
+4. Verify modal behavior
+5. Check responsive design works
+6. Test all acceptance criteria in Safari","1. All Redeem Voucher buttons display correctly in Safari
+2. Click functionality works perfectly
+3. Modal opens and displays properly
+4. Responsive design functions as expected
+5. No browser-specific issues occur
+6. All acceptance criteria pass in Safari","Safari browser compatibility validation"
