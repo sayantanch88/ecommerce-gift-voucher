@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-export default function VoucherModal({ open, onClose, onRedeem, product }) {
+function VoucherModal({ open, onClose, onRedeem, product }) {
   const [voucher, setVoucher] = useState('');
   const [error, setError] = useState('');
 
@@ -38,3 +39,17 @@ export default function VoucherModal({ open, onClose, onRedeem, product }) {
     </div>
   );
 }
+
+VoucherModal.propTypes = {
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onRedeem: PropTypes.func.isRequired,
+  product: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    price: PropTypes.number,
+    image: PropTypes.string
+  })
+};
+
+export default VoucherModal;

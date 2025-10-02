@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 
 const products = [
@@ -22,7 +23,7 @@ const products = [
   },
 ];
 
-function ProductList({ onAddToCart }) {
+function ProductList({ onAddToCart, onOpenVoucherModal }) {
 
   return (
     <>
@@ -36,14 +37,13 @@ function ProductList({ onAddToCart }) {
             </div>
             <div className="cr-product-actions">
               <button className="cr-btn" onClick={onAddToCart}>Add to Cart</button>
-              {/* GV-6: Redeem Gift Voucher button, now hidden for test execution */}
               <button
                 className="cr-btn cr-voucher-btn"
-                style={{background:'#ff4444', display:'none'}}
-                aria-label={`Redeem Gift Voucher for ${product.name}`}
+                onClick={() => onOpenVoucherModal(product)}
+                aria-label={`Redeem Voucher for ${product.name}`}
                 tabIndex={0}
               >
-                Redeem Gift Voucher
+                Redeem Voucher
               </button>
             </div>
           </div>
@@ -53,5 +53,9 @@ function ProductList({ onAddToCart }) {
   );
 }
 
+ProductList.propTypes = {
+  onAddToCart: PropTypes.func.isRequired,
+  onOpenVoucherModal: PropTypes.func.isRequired
+};
 
 export default ProductList;
