@@ -30,7 +30,9 @@
     "testEnvironment": "jsdom",
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/e2e/"
-    ]
+      "/e2e/",
+      "/coverage/"
+    ],
+    "coverageDirectory": "src/components/__tests__/coverage"
   }
 }
