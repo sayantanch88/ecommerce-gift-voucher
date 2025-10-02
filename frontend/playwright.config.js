@@ -7,19 +7,23 @@ const config = {
   timeout: 30000,
   retries: 1,
   ignore: [
-    '**/src/components/__tests__/**',
+    '**/*.test.jsx',
     '**/*.test.{js,jsx,ts,tsx}',
+    '**/__tests__/**',
+    '**/src/components/__tests__/**'
   ],
   reporter: [['list'], ['html', { outputFolder: './e2e/results', open: 'never' }], ['json', { outputFile: './e2e/results/results.json' }]],
   outputDir: './e2e/results',
   use: {
+    baseURL: 'http://localhost:3000',
     headless: true,
-    viewport: { width: 1280, height: 720 },
-    ignoreHTTPSErrors: true,
-    video: 'retain-on-failure',
-    screenshot: 'only-on-failure',
-    baseURL: 'http://localhost:5173', // Vite default dev server
   },
+  outputDir: require('path').resolve(__dirname, 'e2e/results'),
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: require('path').resolve(__dirname, 'e2e/results'), open: 'never' }],
+    ['json', { outputFile: require('path').resolve(__dirname, 'e2e/results/results.json') }],
+  ],
 };
 
 module.exports = config;

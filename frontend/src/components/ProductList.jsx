@@ -4,21 +4,21 @@ import React, { useState } from 'react';
 const products = [
   {
   id: 1,
-  name: 'The Vittoria Sofa',
-  price: 4420,
-  image: '/images/Vittoria.jpg',
+  name: 'SORRENTO Fabric Modular Sofa',
+  price: 3999,
+  image: '/images/Sorrento.webp',
   },
   {
   id: 2,
-  name: 'Oslo Coffee Table',
-  price: 1420,
-  image: '/images/Oslo.jpg',
+  name: 'HARLOW Side Table',
+  price: 199,
+  image: '/images/Harlow.webp',
   },
   {
   id: 3,
-  name: 'Victor Swivel Chair',
-  price: 1645,
-  image: '/images/Victor.jpg',
+  name: 'AVA Bed',
+  price: 999,
+  image: '/images/Ava Bed.jpg',
   },
 ];
 
