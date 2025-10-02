@@ -22,7 +22,7 @@ function VoucherModal({ open, onClose, onRedeem, product }) {
     <div className="cr-modal-overlay">
       <div className="cr-modal" role="dialog" aria-modal="true" aria-label="Redeem Gift Voucher Modal">
         <h3>Redeem Gift Voucher</h3>
-        <p>Enter your voucher code to get a discount on <b>{product.name}</b>.</p>
+        <p>Enter your voucher code to get a discount on <b>{product?.name || 'this product'}</b>.</p>
         <input
           type="text"
           value={voucher}
