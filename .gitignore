@@ -4,6 +4,13 @@ frontend/package-lock.json
 src/.DS_Store
 .DS_Store
 
+# Build artifacts
+dist/
+build/
+frontend/dist/
+frontend/build/
+backend/target/
+
 # MCP Playwright artifacts
 .playwright-mcp/
 *.png
