@@ -26,6 +26,12 @@
     "vite": "^4.0.0"
   },
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/e2e/",
+      "/coverage/"
+    ],
+    "coverageDirectory": "src/components/__tests__/coverage"
   }
 }
