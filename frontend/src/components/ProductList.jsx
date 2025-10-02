@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 
 const products = [
@@ -36,12 +37,15 @@ function ProductList({ onAddToCart }) {
             </div>
             <div className="cr-product-actions">
               <button className="cr-btn" onClick={onAddToCart}>Add to Cart</button>
-              {/* GV-6: Redeem Gift Voucher button, now hidden for test execution */}
+              {/* GV-48: Redeem Gift Voucher button - now visible with proper styling */}
               <button
                 className="cr-btn cr-voucher-btn"
-                style={{background:'#ff4444', display:'none'}}
                 aria-label={`Redeem Gift Voucher for ${product.name}`}
                 tabIndex={0}
+                onClick={() => {
+                  console.log(`Redeem voucher clicked for product: ${product.name}`);
+                  // TODO: Open modal dialog (will be implemented in future story)
+                }}
               >
                 Redeem Gift Voucher
               </button>
@@ -53,5 +57,8 @@ function ProductList({ onAddToCart }) {
   );
 }
 
+ProductList.propTypes = {
+  onAddToCart: PropTypes.func.isRequired
+};
 
 export default ProductList;
